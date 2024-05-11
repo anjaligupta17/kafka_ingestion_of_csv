@@ -23,14 +23,12 @@ services:
 
   producer:
     build:
-      context: .
-      dockerfile: Dockerfile_producer
+      context: ./producer
     volumes:
       - ./data:/app/data
 
   consumer:
     build:
-      context: .
-      dockerfile: Dockerfile_consumer
+      context: ./consumer
     volumes:
       - ./data:/app/data
